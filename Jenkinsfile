@@ -5,7 +5,7 @@ git 'https://github.com/chandrashekhar97/TestJenkins'
 }
 stage('Compile-Package'){
   //Get maven home path
-   def mvmHome=tool name: 'maven3', type: 'maven'
-  sh "${mvnHome}/bin/mvn package"
+   def MAVEN_HOME=tool name: 'maven3', type: 'maven'
+  sh "${MAVEN_HOME}/bin/mvn package"
 }
 }
